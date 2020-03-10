@@ -24,11 +24,14 @@ public class SalariedEmployee extends Employee{
     this.fixedMonthlyPayment = fixedMonthlyPayment;
   }
 
+
+@Override
   public double getAverageMonthlySalary() {
     return getFixedMonthlyPayment();
   }
 
-  public double calculatePay() {
-    return getFixedMonthlyPayment();
+  @Override
+  public void calculatePay() {
+    getAverageMonthlySalary();
   }
 }

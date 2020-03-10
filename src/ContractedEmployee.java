@@ -32,10 +32,12 @@ public class ContractedEmployee extends Employee {
     this.numberOfHoursWorked= numberOfHoursWorked;
   }
 
-  public double calculatePay() {
-    return getAverageMonthlySalary();
+  @Override
+  public void calculatePay() {
+    getAverageMonthlySalary();
   }
 
+  @Override
   public double getAverageMonthlySalary() {
     return hourlyRate * numberOfHoursWorked;
   }

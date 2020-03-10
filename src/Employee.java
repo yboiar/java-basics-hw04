@@ -26,8 +26,8 @@ public class Employee implements Payable {
     return 0.0;
   }
 
-  public double calculatePay() {
-    return getAverageMonthlySalary();
+  public void calculatePay() {
+    getAverageMonthlySalary();
   }
 
   @Override
