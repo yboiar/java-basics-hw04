@@ -1,4 +1,4 @@
-public class SalariedEmployee extends Employee{
+public class SalariedEmployee extends Employee {
 
   private String socialSecurityNumber;
   private double fixedMonthlyPayment;
@@ -24,14 +24,13 @@ public class SalariedEmployee extends Employee{
     this.fixedMonthlyPayment = fixedMonthlyPayment;
   }
 
-
 @Override
   public double getAverageMonthlySalary() {
-    return getFixedMonthlyPayment();
+    return calculatePay();
   }
 
   @Override
-  public void calculatePay() {
-    getAverageMonthlySalary();
+  public double calculatePay() {
+    return getFixedMonthlyPayment();
   }
 }
